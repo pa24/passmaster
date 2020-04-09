@@ -40,13 +40,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.OnlyFirstName = new System.Windows.Forms.TextBox();
             this.OnlySecondName = new System.Windows.Forms.TextBox();
+            this.shortMail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // fio
             // 
             this.fio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fio.Location = new System.Drawing.Point(9, 15);
-            this.fio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fio.Margin = new System.Windows.Forms.Padding(2);
             this.fio.Name = "fio";
             this.fio.Size = new System.Drawing.Size(245, 24);
             this.fio.TabIndex = 0;
@@ -58,7 +59,7 @@
             // 
             this.fioTranslite.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fioTranslite.Location = new System.Drawing.Point(10, 84);
-            this.fioTranslite.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fioTranslite.Margin = new System.Windows.Forms.Padding(2);
             this.fioTranslite.Name = "fioTranslite";
             this.fioTranslite.Size = new System.Drawing.Size(158, 19);
             this.fioTranslite.TabIndex = 1;
@@ -68,8 +69,8 @@
             // mail
             // 
             this.mail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mail.Location = new System.Drawing.Point(10, 128);
-            this.mail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mail.Location = new System.Drawing.Point(10, 174);
+            this.mail.Margin = new System.Windows.Forms.Padding(2);
             this.mail.Name = "mail";
             this.mail.Size = new System.Drawing.Size(245, 26);
             this.mail.TabIndex = 2;
@@ -80,8 +81,8 @@
             // passMail
             // 
             this.passMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passMail.Location = new System.Drawing.Point(10, 157);
-            this.passMail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.passMail.Location = new System.Drawing.Point(10, 203);
+            this.passMail.Margin = new System.Windows.Forms.Padding(2);
             this.passMail.Name = "passMail";
             this.passMail.Size = new System.Drawing.Size(245, 26);
             this.passMail.TabIndex = 3;
@@ -103,8 +104,8 @@
             // passFD
             // 
             this.passFD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passFD.Location = new System.Drawing.Point(11, 196);
-            this.passFD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.passFD.Location = new System.Drawing.Point(11, 242);
+            this.passFD.Margin = new System.Windows.Forms.Padding(2);
             this.passFD.Name = "passFD";
             this.passFD.Size = new System.Drawing.Size(245, 26);
             this.passFD.TabIndex = 8;
@@ -114,8 +115,8 @@
             // passAmo
             // 
             this.passAmo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passAmo.Location = new System.Drawing.Point(12, 226);
-            this.passAmo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.passAmo.Location = new System.Drawing.Point(12, 272);
+            this.passAmo.Margin = new System.Windows.Forms.Padding(2);
             this.passAmo.Name = "passAmo";
             this.passAmo.Size = new System.Drawing.Size(245, 26);
             this.passAmo.TabIndex = 10;
@@ -125,7 +126,7 @@
             // 
             this.generate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generate.Location = new System.Drawing.Point(184, 84);
-            this.generate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.generate.Margin = new System.Windows.Forms.Padding(2);
             this.generate.Name = "generate";
             this.generate.Size = new System.Drawing.Size(70, 34);
             this.generate.TabIndex = 11;
@@ -137,11 +138,11 @@
             // 
             this.trackerOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.trackerOut.Location = new System.Drawing.Point(272, 46);
-            this.trackerOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trackerOut.Margin = new System.Windows.Forms.Padding(2);
             this.trackerOut.Multiline = true;
             this.trackerOut.Name = "trackerOut";
             this.trackerOut.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.trackerOut.Size = new System.Drawing.Size(248, 206);
+            this.trackerOut.Size = new System.Drawing.Size(248, 250);
             this.trackerOut.TabIndex = 16;
             this.trackerOut.Click += new System.EventHandler(this.trackerOut_Click);
             this.trackerOut.TextChanged += new System.EventHandler(this.trackerOut_TextChanged);
@@ -175,12 +176,24 @@
             this.OnlySecondName.Click += new System.EventHandler(this.OnlySecondName_Click);
             this.OnlySecondName.TextChanged += new System.EventHandler(this.OnlySecondName_TextChanged);
             // 
+            // shortMail
+            // 
+            this.shortMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shortMail.Location = new System.Drawing.Point(9, 144);
+            this.shortMail.Margin = new System.Windows.Forms.Padding(2);
+            this.shortMail.Name = "shortMail";
+            this.shortMail.Size = new System.Drawing.Size(144, 26);
+            this.shortMail.TabIndex = 21;
+            this.shortMail.Text = "short Email";
+            this.shortMail.Click += new System.EventHandler(this.shortMail_Click);
+            // 
             // Form1
             // 
             this.AcceptButton = this.generate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 352);
+            this.ClientSize = new System.Drawing.Size(531, 307);
+            this.Controls.Add(this.shortMail);
             this.Controls.Add(this.OnlySecondName);
             this.Controls.Add(this.OnlyFirstName);
             this.Controls.Add(this.label3);
@@ -194,7 +207,7 @@
             this.Controls.Add(this.fioTranslite);
             this.Controls.Add(this.fio);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Password Master";
@@ -219,6 +232,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox OnlyFirstName;
         private System.Windows.Forms.TextBox OnlySecondName;
+        private System.Windows.Forms.TextBox shortMail;
     }
 }
 

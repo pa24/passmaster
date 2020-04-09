@@ -98,6 +98,7 @@ namespace WindowsFormsApp1
             }
             fioTranslite.Text = source;
 
+            
 
 
         }
@@ -108,7 +109,7 @@ namespace WindowsFormsApp1
         }
         private void mail_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(mail.Text);
+            buffer(mail);
            
         }
 
@@ -126,7 +127,7 @@ namespace WindowsFormsApp1
         }
         private void mail_TextChanged(object sender, EventArgs e)
         {
-            Clipboard.SetText(mail.Text);
+            
         }
         private void passMail_TextChanged(object sender, EventArgs e)
         {
@@ -135,7 +136,8 @@ namespace WindowsFormsApp1
 
         private void passMail_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(passMail.Text);
+            // Clipboard.SetText(passMail.Text);
+            buffer(passMail);
         }
 
         private void passFD_TextChanged(object sender, EventArgs e)
@@ -149,7 +151,7 @@ namespace WindowsFormsApp1
                 //Ничего не делаем
             }
             else
-                Clipboard.SetText(passFD.Text);
+                buffer(passFD);
         }
         private void passIntercom_Click(object sender, EventArgs e)
         {
@@ -162,7 +164,7 @@ namespace WindowsFormsApp1
                 //Ничего не делаем
             }
             else
-                Clipboard.SetText(passAmo.Text);
+                buffer(passAmo);
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -172,14 +174,22 @@ namespace WindowsFormsApp1
             string temp2 = words[1].Remove(1, words[1].Length - 1);  // I. - сокращенное имя
             string FullfirstName = words[1];
             string firstName = temp2 + ".";
-            mail.Text = firstName.ToLower() + lastName.ToLower() + "@smartway.today"; // i.ivanov@smartway.today
-            OnlyFirstName.Text = FullfirstName; //полное имя
-            OnlySecondName.Text = lastName;
+            shortMail.Text = firstName.ToLower() + lastName.ToLower() ;
+
+            mail.Text = shortMail.Text + "@smartway.today"; //email без домена
+
+            // разбивка строки на слова
+            string[] word = fio.Text.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            OnlyFirstName.Text = word[0];
+            OnlySecondName.Text = word[1];
+
+            
+
             // генерирование паролей 
             passMail.Text = RndStr(6, 6);
             passFD.Text = RndStr(6, 6);
             passAmo.Text = RndStr(6, 6);
-            Clipboard.SetText(mail.Text);
+           // Clipboard.SetText(mail.Text);
 
             trackerOut.Text = fio.Text;
             trackerOut.AppendText(writer(mail.Text, passMail.Text, "Почта"));
@@ -212,7 +222,7 @@ namespace WindowsFormsApp1
             {
                 //Ничего не делаем
             }
-            else Clipboard.SetText(trackerOut.Text);
+            else buffer(trackerOut); // Clipboard.SetText(trackerOut.Text);
 
         }
         private void button1_Click_1(object sender, EventArgs e)
@@ -234,7 +244,7 @@ namespace WindowsFormsApp1
 
         private void fio_Click(object sender, EventArgs e)
         {
-            
+            buffer(fio);
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -255,19 +265,26 @@ namespace WindowsFormsApp1
         private void OnlyFirstName_Click(object sender, EventArgs e)
 
         {
-            OnlyFirstName.SelectionStart = 0;
-            OnlyFirstName.SelectionLength = OnlyFirstName.Text.Length;
-            OnlyFirstName.Focus();
-            Clipboard.SetText(OnlyFirstName.Text);
+            buffer(OnlyFirstName);
            
         }
 
         private void OnlySecondName_Click(object sender, EventArgs e)
         {
-            OnlySecondName.SelectionStart = 0;
-            OnlySecondName.SelectionLength = OnlySecondName.Text.Length;
-            OnlySecondName.Focus();
-            Clipboard.SetText(OnlySecondName.Text);
+            buffer(OnlySecondName);
+        }
+
+        private void shortMail_Click(object sender, EventArgs e)
+        {
+            buffer(shortMail);
+        }
+        private void buffer(TextBox a)  // функция для выделения и копирования текста. В аргумент подставляю textbox
+        {
+            a.SelectionStart = 0;
+            a.SelectionLength = a.Text.Length;
+            a.Focus();
+            Clipboard.SetText(a.Text);
+            
         }
     }
 }
