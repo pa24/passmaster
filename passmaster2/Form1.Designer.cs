@@ -38,11 +38,8 @@
             this.passFD = new System.Windows.Forms.TextBox();
             this.passAmo = new System.Windows.Forms.TextBox();
             this.generate = new System.Windows.Forms.Button();
-            this.chkFD = new System.Windows.Forms.CheckBox();
-            this.chkAmo = new System.Windows.Forms.CheckBox();
             this.trackerOut = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.OnlyFirstName = new System.Windows.Forms.TextBox();
             this.OnlySecondName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -160,33 +157,6 @@
             this.generate.UseVisualStyleBackColor = true;
             this.generate.Click += new System.EventHandler(this.button1_Click);
             // 
-            // chkFD
-            // 
-            this.chkFD.AutoSize = true;
-            this.chkFD.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFD.Location = new System.Drawing.Point(419, 24);
-            this.chkFD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.chkFD.Name = "chkFD";
-            this.chkFD.Size = new System.Drawing.Size(40, 17);
-            this.chkFD.TabIndex = 12;
-            this.chkFD.Text = "FD";
-            this.chkFD.UseVisualStyleBackColor = true;
-            this.chkFD.CheckedChanged += new System.EventHandler(this.chkFD_CheckedChanged);
-            // 
-            // chkAmo
-            // 
-            this.chkAmo.AutoSize = true;
-            this.chkAmo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkAmo.Location = new System.Drawing.Point(460, 24);
-            this.chkAmo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.chkAmo.Name = "chkAmo";
-            this.chkAmo.Size = new System.Drawing.Size(47, 17);
-            this.chkAmo.TabIndex = 14;
-            this.chkAmo.Text = "Amo";
-            this.chkAmo.UseVisualStyleBackColor = true;
-            this.chkAmo.CheckedChanged += new System.EventHandler(this.chkAmo_CheckedChanged);
-            this.chkAmo.Click += new System.EventHandler(this.chkAmo_Click);
-            // 
             // trackerOut
             // 
             this.trackerOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -211,20 +181,6 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "Код для трекера:";
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Enabled = false;
-            this.checkBox1.Location = new System.Drawing.Point(367, 24);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(51, 17);
-            this.checkBox1.TabIndex = 18;
-            this.checkBox1.Text = "Email";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // OnlyFirstName
             // 
             this.OnlyFirstName.Location = new System.Drawing.Point(9, 46);
@@ -247,11 +203,8 @@
             this.ClientSize = new System.Drawing.Size(531, 352);
             this.Controls.Add(this.OnlySecondName);
             this.Controls.Add(this.OnlyFirstName);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.trackerOut);
-            this.Controls.Add(this.chkAmo);
-            this.Controls.Add(this.chkFD);
             this.Controls.Add(this.generate);
             this.Controls.Add(this.passAmo);
             this.Controls.Add(this.passFD);
@@ -286,11 +239,8 @@
         private System.Windows.Forms.TextBox passFD;
         private System.Windows.Forms.TextBox passAmo;
         private System.Windows.Forms.Button generate;
-        private System.Windows.Forms.CheckBox chkFD;
-        private System.Windows.Forms.CheckBox chkAmo;
         private System.Windows.Forms.TextBox trackerOut;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox OnlyFirstName;
         private System.Windows.Forms.TextBox OnlySecondName;
     }

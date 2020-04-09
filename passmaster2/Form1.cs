@@ -116,7 +116,7 @@ namespace WindowsFormsApp1
         private static string RndStr(int letters, int numbers)
         {
             StringBuilder sb = new StringBuilder(letters + numbers);
-            string letterSet = "abcdefghijklmnpqrstuvwxyzABCDEFGHIJKLMNPQRSTUVWXYZ";
+            string letterSet = "abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ";
             string numberSet = "0123456789!?$*+=";
             for (int i = 0; i < letters; i++)
                 sb.Append(letterSet[rnd.Next(letterSet.Length)]);
@@ -169,10 +169,11 @@ namespace WindowsFormsApp1
             string temp = fioTranslite.Text;
             string[] words = temp.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             string lastName = words[0]; // Ivanov
-            string temp2 = words[1].Remove(1, words[1].Length - 1);  // I.
+            string temp2 = words[1].Remove(1, words[1].Length - 1);  // I. - сокращенное имя
+            string FullfirstName = words[1];
             string firstName = temp2 + ".";
             mail.Text = firstName.ToLower() + lastName.ToLower() + "@smartway.today"; // i.ivanov@smartway.today
-            OnlyFirstName.Text = firstName;
+            OnlyFirstName.Text = FullfirstName; //полное имя
             OnlySecondName.Text = lastName;
             // генерирование паролей 
             passMail.Text = RndStr(6, 6);
@@ -199,10 +200,7 @@ namespace WindowsFormsApp1
         }
         private void chkAmo_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkAmo.Checked)
-            {
-                trackerOut.AppendText(writer(mail.Text, passAmo.Text, "AmoCRM"));
-            }
+            
         }
         private void chkAmo_Click(object sender, EventArgs e)
         {
@@ -231,15 +229,17 @@ namespace WindowsFormsApp1
 
         private void chkFD_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkFD.Checked)
-            {
-                trackerOut.AppendText(writer(mail.Text, passFD.Text, "FreshDesk"));
-            }
+          
         }
 
         private void fio_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
