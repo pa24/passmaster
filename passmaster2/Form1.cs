@@ -241,5 +241,33 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void OnlyFirstName_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void OnlySecondName_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void OnlyFirstName_Click(object sender, EventArgs e)
+
+        {
+            OnlyFirstName.SelectionStart = 0;
+            OnlyFirstName.SelectionLength = OnlyFirstName.Text.Length;
+            OnlyFirstName.Focus();
+            Clipboard.SetText(OnlyFirstName.Text);
+           
+        }
+
+        private void OnlySecondName_Click(object sender, EventArgs e)
+        {
+            OnlySecondName.SelectionStart = 0;
+            OnlySecondName.SelectionLength = OnlySecondName.Text.Length;
+            OnlySecondName.Focus();
+            Clipboard.SetText(OnlySecondName.Text);
+        }
     }
 }

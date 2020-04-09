@@ -33,8 +33,6 @@
             this.mail = new System.Windows.Forms.TextBox();
             this.passMail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.passFD = new System.Windows.Forms.TextBox();
             this.passAmo = new System.Windows.Forms.TextBox();
             this.generate = new System.Windows.Forms.Button();
@@ -102,32 +100,10 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Почта";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 199);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "FreshDesk";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(10, 244);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "AmoCRM";
-            // 
             // passFD
             // 
             this.passFD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passFD.Location = new System.Drawing.Point(10, 215);
+            this.passFD.Location = new System.Drawing.Point(11, 196);
             this.passFD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.passFD.Name = "passFD";
             this.passFD.Size = new System.Drawing.Size(245, 26);
@@ -138,7 +114,7 @@
             // passAmo
             // 
             this.passAmo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passAmo.Location = new System.Drawing.Point(10, 260);
+            this.passAmo.Location = new System.Drawing.Point(12, 226);
             this.passAmo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.passAmo.Name = "passAmo";
             this.passAmo.Size = new System.Drawing.Size(245, 26);
@@ -165,7 +141,7 @@
             this.trackerOut.Multiline = true;
             this.trackerOut.Name = "trackerOut";
             this.trackerOut.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.trackerOut.Size = new System.Drawing.Size(248, 201);
+            this.trackerOut.Size = new System.Drawing.Size(248, 206);
             this.trackerOut.TabIndex = 16;
             this.trackerOut.Click += new System.EventHandler(this.trackerOut_Click);
             this.trackerOut.TextChanged += new System.EventHandler(this.trackerOut_TextChanged);
@@ -187,6 +163,8 @@
             this.OnlyFirstName.Name = "OnlyFirstName";
             this.OnlyFirstName.Size = new System.Drawing.Size(116, 20);
             this.OnlyFirstName.TabIndex = 19;
+            this.OnlyFirstName.Click += new System.EventHandler(this.OnlyFirstName_Click);
+            this.OnlyFirstName.TextChanged += new System.EventHandler(this.OnlyFirstName_TextChanged);
             // 
             // OnlySecondName
             // 
@@ -194,6 +172,8 @@
             this.OnlySecondName.Name = "OnlySecondName";
             this.OnlySecondName.Size = new System.Drawing.Size(123, 20);
             this.OnlySecondName.TabIndex = 20;
+            this.OnlySecondName.Click += new System.EventHandler(this.OnlySecondName_Click);
+            this.OnlySecondName.TextChanged += new System.EventHandler(this.OnlySecondName_TextChanged);
             // 
             // Form1
             // 
@@ -208,8 +188,6 @@
             this.Controls.Add(this.generate);
             this.Controls.Add(this.passAmo);
             this.Controls.Add(this.passFD);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.passMail);
             this.Controls.Add(this.mail);
@@ -234,8 +212,6 @@
         private System.Windows.Forms.TextBox mail;
         private System.Windows.Forms.TextBox passMail;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox passFD;
         private System.Windows.Forms.TextBox passAmo;
         private System.Windows.Forms.Button generate;
