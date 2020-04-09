@@ -172,7 +172,8 @@ namespace WindowsFormsApp1
             string temp2 = words[1].Remove(1, words[1].Length - 1);  // I.
             string firstName = temp2 + ".";
             mail.Text = firstName.ToLower() + lastName.ToLower() + "@smartway.today"; // i.ivanov@smartway.today
-
+            OnlyFirstName.Text = firstName;
+            OnlySecondName.Text = lastName;
             // генерирование паролей 
             passMail.Text = RndStr(6, 6);
             passFD.Text = RndStr(6, 6);
