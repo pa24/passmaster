@@ -172,7 +172,7 @@ namespace WindowsFormsApp1
             string[] words = temp.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             string lastName = words[0]; // Ivanov
             string temp2 = words[1].Remove(1, words[1].Length - 1);  // I. - сокращенное имя
-            string FullfirstName = words[1];
+           // string FullfirstName = words[1];
             string firstName = temp2 + ".";
             shortMail.Text = firstName.ToLower() + lastName.ToLower() ;
 
