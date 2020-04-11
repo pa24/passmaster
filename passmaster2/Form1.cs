@@ -194,10 +194,7 @@ namespace WindowsFormsApp1
             trackerOut.Text = fio.Text;
             trackerOut.AppendText(writer(mail.Text, passMail.Text, "Почта"));
         }
-        private void tracker_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         // вывод для трекера
         private static string writer(string Email, string password, string nameOfService)
@@ -218,11 +215,7 @@ namespace WindowsFormsApp1
         }
         private void trackerOut_Click(object sender, EventArgs e)
         {
-            if (trackerOut.Text == "")
-            {
-                //Ничего не делаем
-            }
-            else buffer(trackerOut); // Clipboard.SetText(trackerOut.Text);
+           buffer(trackerOut); // Clipboard.SetText(trackerOut.Text);
 
         }
         private void button1_Click_1(object sender, EventArgs e)
@@ -280,11 +273,17 @@ namespace WindowsFormsApp1
         }
         private void buffer(TextBox a)  // функция для выделения и копирования текста. В аргумент подставляю textbox
         {
-            a.SelectionStart = 0;
-            a.SelectionLength = a.Text.Length;
-            a.Focus();
-            Clipboard.SetText(a.Text);
-            
+            if (a.Text == "")
+            {
+                //Ничего не делаем
+            }
+            else
+            {
+                a.SelectionStart = 0;
+                a.SelectionLength = a.Text.Length;
+                a.Focus();
+                Clipboard.SetText(a.Text);
+            }
         }
     }
 }
