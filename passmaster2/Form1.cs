@@ -206,7 +206,7 @@ namespace WindowsFormsApp1
                 "|| **" + nameOfService + "**||\r\n" +
                 "|| Логин | %%" + Email + "%%||\r\n" +
                 "|| Пароль | %%" + password + "%%||\r\n" +
-                "|#\r\n";
+                "|#\r\nВнутренний номер:\r\nОстальные учетки на почте";
         }
         private void chkAmo_CheckedChanged(object sender, EventArgs e)
         {
