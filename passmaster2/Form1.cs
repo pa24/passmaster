@@ -98,7 +98,7 @@ namespace WindowsFormsApp1
             }
             fioTranslite.Text = source;
 
-            
+
 
 
         }
@@ -110,9 +110,7 @@ namespace WindowsFormsApp1
         private void mail_Click(object sender, EventArgs e)
         {
             buffer(mail);
-           
         }
-
         private static Random rnd = new Random();
         private static string RndStr(int letters, int numbers)
         {
@@ -127,7 +125,7 @@ namespace WindowsFormsApp1
         }
         private void mail_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
         private void passMail_TextChanged(object sender, EventArgs e)
         {
@@ -139,19 +137,13 @@ namespace WindowsFormsApp1
             // Clipboard.SetText(passMail.Text);
             buffer(passMail);
         }
-
         private void passFD_TextChanged(object sender, EventArgs e)
         {
 
         }
         private void passFD_Click(object sender, EventArgs e)
         {
-            if (passFD.Text == "")
-            {
-                //Ничего не делаем
-            }
-            else
-                buffer(passFD);
+            buffer(passFD);
         }
         private void passIntercom_Click(object sender, EventArgs e)
         {
@@ -159,12 +151,7 @@ namespace WindowsFormsApp1
         }
         private void passAmo_Click(object sender, EventArgs e)
         {
-            if (passAmo.Text == "")
-            {
-                //Ничего не делаем
-            }
-            else
-                buffer(passAmo);
+            buffer(passAmo);
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -172,9 +159,9 @@ namespace WindowsFormsApp1
             string[] words = temp.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             string lastName = words[0]; // Ivanov
             string temp2 = words[1].Remove(1, words[1].Length - 1);  // I. - сокращенное имя
-           // string FullfirstName = words[1];
+                                                                     // string FullfirstName = words[1];
             string firstName = temp2 + ".";
-            shortMail.Text = firstName.ToLower() + lastName.ToLower() ;
+            shortMail.Text = firstName.ToLower() + lastName.ToLower();
 
             mail.Text = shortMail.Text + "@smartway.today"; //email без домена
 
@@ -183,18 +170,18 @@ namespace WindowsFormsApp1
             OnlyFirstName.Text = word[0];
             OnlySecondName.Text = word[1];
 
-            
+
 
             // генерирование паролей 
             passMail.Text = RndStr(6, 6);
             passFD.Text = RndStr(6, 6);
             passAmo.Text = RndStr(6, 6);
-           // Clipboard.SetText(mail.Text);
+            // Clipboard.SetText(mail.Text);
 
             trackerOut.Text = fio.Text;
             trackerOut.AppendText(writer(mail.Text, passMail.Text, "Почта"));
         }
-       
+
 
         // вывод для трекера
         private static string writer(string Email, string password, string nameOfService)
@@ -207,7 +194,7 @@ namespace WindowsFormsApp1
         }
         private void chkAmo_CheckedChanged(object sender, EventArgs e)
         {
-            
+
         }
         private void chkAmo_Click(object sender, EventArgs e)
         {
@@ -215,14 +202,13 @@ namespace WindowsFormsApp1
         }
         private void trackerOut_Click(object sender, EventArgs e)
         {
-           buffer(trackerOut); // Clipboard.SetText(trackerOut.Text);
-
+            buffer(trackerOut);
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
-           
-            
-          
+
+
+
         }
 
         private void trackerOut_TextChanged(object sender, EventArgs e)
@@ -232,14 +218,13 @@ namespace WindowsFormsApp1
 
         private void chkFD_CheckedChanged(object sender, EventArgs e)
         {
-          
+
         }
 
         private void fio_Click(object sender, EventArgs e)
         {
             buffer(fio);
         }
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -247,26 +232,22 @@ namespace WindowsFormsApp1
 
         private void OnlyFirstName_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void OnlySecondName_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void OnlyFirstName_Click(object sender, EventArgs e)
-
         {
             buffer(OnlyFirstName);
-           
         }
-
         private void OnlySecondName_Click(object sender, EventArgs e)
         {
             buffer(OnlySecondName);
         }
-
         private void shortMail_Click(object sender, EventArgs e)
         {
             buffer(shortMail);
