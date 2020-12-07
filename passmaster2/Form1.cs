@@ -143,7 +143,7 @@ namespace WindowsFormsApp1
         }
         private void passFD_Click(object sender, EventArgs e)
         {
-            buffer(passFD);
+            buffer(passGitea);
         }
         private void passIntercom_Click(object sender, EventArgs e)
         {
@@ -151,7 +151,7 @@ namespace WindowsFormsApp1
         }
         private void passAmo_Click(object sender, EventArgs e)
         {
-            buffer(passAmo);
+            buffer(passJenkins);
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -174,12 +174,13 @@ namespace WindowsFormsApp1
 
             // генерирование паролей 
             passMail.Text = RndStr(6, 6);
-            passFD.Text = RndStr(6, 6);
-            passAmo.Text = RndStr(6, 6);
+            passGitea.Text = RndStr(6, 6);
+            passJenkins.Text = RndStr(6, 6);
             // Clipboard.SetText(mail.Text);
 
             trackerOut.Text = fio.Text;
             trackerOut.AppendText(writer(mail.Text, passMail.Text, "Почта"));
+            trackerOut.AppendText("Остальные учетки на почте");
         }
 
 
@@ -189,8 +190,8 @@ namespace WindowsFormsApp1
             return "\r\n#|\r\n" +
                 "|| **" + nameOfService + "**||\r\n" +
                 "|| Логин | %%" + Email + "%%||\r\n" +
-                "|| Пароль | %%" + password + "%%||\r\n" +
-                "|#\r\nВнутренний номер:\r\nОстальные учетки на почте";
+                "|| Пароль | %%" + password + "%%||\r\n" + "|#";
+               // "|#\r\nВнутренний номер:\r\nОстальные учетки на почте";
         }
         private void chkAmo_CheckedChanged(object sender, EventArgs e)
         {
@@ -264,6 +265,14 @@ namespace WindowsFormsApp1
                 a.SelectionLength = a.Text.Length;
                 a.Focus();
                 Clipboard.SetText(a.Text);
+            }
+        }
+
+        private void chkbDev_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkbDev.Checked) 
+            {
+                trackerOut.AppendText(writer(mail.Text, passGitea.Text, "Gitea"));
             }
         }
     }

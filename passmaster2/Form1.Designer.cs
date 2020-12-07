@@ -33,14 +33,17 @@
             this.mail = new System.Windows.Forms.TextBox();
             this.passMail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.passFD = new System.Windows.Forms.TextBox();
-            this.passAmo = new System.Windows.Forms.TextBox();
+            this.passGitea = new System.Windows.Forms.TextBox();
+            this.passJenkins = new System.Windows.Forms.TextBox();
             this.generate = new System.Windows.Forms.Button();
             this.trackerOut = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.OnlyFirstName = new System.Windows.Forms.TextBox();
             this.OnlySecondName = new System.Windows.Forms.TextBox();
             this.shortMail = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.chkbDev = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // fio
@@ -101,26 +104,26 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Почта";
             // 
-            // passFD
+            // passGitea
             // 
-            this.passFD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passFD.Location = new System.Drawing.Point(11, 225);
-            this.passFD.Margin = new System.Windows.Forms.Padding(2);
-            this.passFD.Name = "passFD";
-            this.passFD.Size = new System.Drawing.Size(245, 26);
-            this.passFD.TabIndex = 8;
-            this.passFD.Click += new System.EventHandler(this.passFD_Click);
-            this.passFD.TextChanged += new System.EventHandler(this.passFD_TextChanged);
+            this.passGitea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passGitea.Location = new System.Drawing.Point(10, 232);
+            this.passGitea.Margin = new System.Windows.Forms.Padding(2);
+            this.passGitea.Name = "passGitea";
+            this.passGitea.Size = new System.Drawing.Size(245, 26);
+            this.passGitea.TabIndex = 8;
+            this.passGitea.Click += new System.EventHandler(this.passFD_Click);
+            this.passGitea.TextChanged += new System.EventHandler(this.passFD_TextChanged);
             // 
-            // passAmo
+            // passJenkins
             // 
-            this.passAmo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passAmo.Location = new System.Drawing.Point(12, 255);
-            this.passAmo.Margin = new System.Windows.Forms.Padding(2);
-            this.passAmo.Name = "passAmo";
-            this.passAmo.Size = new System.Drawing.Size(245, 26);
-            this.passAmo.TabIndex = 10;
-            this.passAmo.Click += new System.EventHandler(this.passAmo_Click);
+            this.passJenkins.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passJenkins.Location = new System.Drawing.Point(10, 275);
+            this.passJenkins.Margin = new System.Windows.Forms.Padding(2);
+            this.passJenkins.Name = "passJenkins";
+            this.passJenkins.Size = new System.Drawing.Size(245, 26);
+            this.passJenkins.TabIndex = 10;
+            this.passJenkins.Click += new System.EventHandler(this.passAmo_Click);
             // 
             // generate
             // 
@@ -187,20 +190,56 @@
             this.shortMail.Text = "short Email";
             this.shortMail.Click += new System.EventHandler(this.shortMail_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(11, 217);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Gitea";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(11, 260);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Jenkins";
+            // 
+            // chkbDev
+            // 
+            this.chkbDev.AutoSize = true;
+            this.chkbDev.Location = new System.Drawing.Point(444, 25);
+            this.chkbDev.Name = "chkbDev";
+            this.chkbDev.Size = new System.Drawing.Size(75, 17);
+            this.chkbDev.TabIndex = 24;
+            this.chkbDev.Text = "Developer";
+            this.chkbDev.UseVisualStyleBackColor = true;
+            this.chkbDev.CheckedChanged += new System.EventHandler(this.chkbDev_CheckedChanged);
+            // 
             // Form1
             // 
             this.AcceptButton = this.generate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 295);
+            this.ClientSize = new System.Drawing.Size(531, 308);
+            this.Controls.Add(this.chkbDev);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.shortMail);
             this.Controls.Add(this.OnlySecondName);
             this.Controls.Add(this.OnlyFirstName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.trackerOut);
             this.Controls.Add(this.generate);
-            this.Controls.Add(this.passAmo);
-            this.Controls.Add(this.passFD);
+            this.Controls.Add(this.passJenkins);
+            this.Controls.Add(this.passGitea);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.passMail);
             this.Controls.Add(this.mail);
@@ -225,14 +264,17 @@
         private System.Windows.Forms.TextBox mail;
         private System.Windows.Forms.TextBox passMail;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox passFD;
-        private System.Windows.Forms.TextBox passAmo;
+        private System.Windows.Forms.TextBox passGitea;
+        private System.Windows.Forms.TextBox passJenkins;
         private System.Windows.Forms.Button generate;
         private System.Windows.Forms.TextBox trackerOut;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox OnlyFirstName;
         private System.Windows.Forms.TextBox OnlySecondName;
         private System.Windows.Forms.TextBox shortMail;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox chkbDev;
     }
 }
 
