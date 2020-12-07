@@ -273,6 +273,8 @@ namespace WindowsFormsApp1
             if (chkbDev.Checked) 
             {
                 trackerOut.AppendText(writer(mail.Text, passGitea.Text, "Gitea"));
+                trackerOut.AppendText(writer(mail.Text, passJenkins.Text, "Jenkins"));
+
             }
         }
     }
