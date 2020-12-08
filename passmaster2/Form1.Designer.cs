@@ -147,7 +147,7 @@
             this.trackerOut.Multiline = true;
             this.trackerOut.Name = "trackerOut";
             this.trackerOut.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.trackerOut.Size = new System.Drawing.Size(248, 235);
+            this.trackerOut.Size = new System.Drawing.Size(248, 323);
             this.trackerOut.TabIndex = 16;
             this.trackerOut.Click += new System.EventHandler(this.trackerOut_Click);
             this.trackerOut.TextChanged += new System.EventHandler(this.trackerOut_TextChanged);

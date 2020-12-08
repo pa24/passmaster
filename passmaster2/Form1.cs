@@ -278,7 +278,7 @@ namespace WindowsFormsApp1
             if (chkbDev.Checked) 
             {
                 trackerOut.AppendText(writer(shortMail.Text, passGitea.Text, "Gitea"));
-                trackerOut.AppendText(writer(shortMail.Text, passJenkins.Text, "Jenkins"));
+                trackerOut.AppendText(writer(tbxJenkinsLogin.Text, passJenkins.Text, "Jenkins"));
 
             }
         }
