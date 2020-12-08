@@ -44,6 +44,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.chkbDev = new System.Windows.Forms.CheckBox();
+            this.tbxGiteaLogin = new System.Windows.Forms.TextBox();
+            this.tbxJenkinsLogin = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // fio
@@ -107,7 +109,7 @@
             // passGitea
             // 
             this.passGitea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passGitea.Location = new System.Drawing.Point(10, 232);
+            this.passGitea.Location = new System.Drawing.Point(9, 266);
             this.passGitea.Margin = new System.Windows.Forms.Padding(2);
             this.passGitea.Name = "passGitea";
             this.passGitea.Size = new System.Drawing.Size(245, 26);
@@ -118,7 +120,7 @@
             // passJenkins
             // 
             this.passJenkins.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passJenkins.Location = new System.Drawing.Point(10, 275);
+            this.passJenkins.Location = new System.Drawing.Point(8, 343);
             this.passJenkins.Margin = new System.Windows.Forms.Padding(2);
             this.passJenkins.Name = "passJenkins";
             this.passJenkins.Size = new System.Drawing.Size(245, 26);
@@ -205,7 +207,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(11, 260);
+            this.label4.Location = new System.Drawing.Point(10, 294);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
@@ -223,12 +225,32 @@
             this.chkbDev.UseVisualStyleBackColor = true;
             this.chkbDev.CheckedChanged += new System.EventHandler(this.chkbDev_CheckedChanged);
             // 
+            // tbxGiteaLogin
+            // 
+            this.tbxGiteaLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxGiteaLogin.Location = new System.Drawing.Point(8, 236);
+            this.tbxGiteaLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxGiteaLogin.Name = "tbxGiteaLogin";
+            this.tbxGiteaLogin.Size = new System.Drawing.Size(245, 26);
+            this.tbxGiteaLogin.TabIndex = 25;
+            // 
+            // tbxJenkinsLogin
+            // 
+            this.tbxJenkinsLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxJenkinsLogin.Location = new System.Drawing.Point(8, 313);
+            this.tbxJenkinsLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxJenkinsLogin.Name = "tbxJenkinsLogin";
+            this.tbxJenkinsLogin.Size = new System.Drawing.Size(245, 26);
+            this.tbxJenkinsLogin.TabIndex = 26;
+            // 
             // Form1
             // 
             this.AcceptButton = this.generate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 308);
+            this.ClientSize = new System.Drawing.Size(531, 398);
+            this.Controls.Add(this.tbxJenkinsLogin);
+            this.Controls.Add(this.tbxGiteaLogin);
             this.Controls.Add(this.chkbDev);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -275,6 +297,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox chkbDev;
+        private System.Windows.Forms.TextBox tbxGiteaLogin;
+        private System.Windows.Forms.TextBox tbxJenkinsLogin;
     }
 }
 

@@ -162,7 +162,7 @@ namespace WindowsFormsApp1
                                                                      // string FullfirstName = words[1];
             string firstName = temp2 + ".";
             shortMail.Text = firstName.ToLower() + lastName.ToLower();
-
+            tbxGiteaLogin.Text = shortMail.Text;
             mail.Text = shortMail.Text + "@smartway.today"; //email без домена
 
             // разбивка строки на слова
