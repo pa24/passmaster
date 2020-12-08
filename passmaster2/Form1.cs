@@ -181,6 +181,9 @@ namespace WindowsFormsApp1
             trackerOut.Text = fio.Text;
             trackerOut.AppendText(writer(mail.Text, passMail.Text, "Почта"));
             trackerOut.AppendText("Остальные учетки на почте");
+            trackerOut.AppendText("\r\n((https://wiki.yandex.ru/homepage/Office/Nastrojjki-programm/Phoner-Lite/ Настройка PhonerLite))");
+            trackerOut.AppendText("\r\n((https://wiki.yandex.ru/homepage/office/nastrojjki-programm/singinslack/ Как войти в Slack))");
+
         }
 
 
