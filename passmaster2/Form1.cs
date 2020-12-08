@@ -161,8 +161,10 @@ namespace WindowsFormsApp1
             string temp2 = words[1].Remove(1, words[1].Length - 1);  // I. - сокращенное имя
                                                                      // string FullfirstName = words[1];
             string firstName = temp2 + ".";
+
             shortMail.Text = firstName.ToLower() + lastName.ToLower();
             tbxGiteaLogin.Text = shortMail.Text;
+            tbxJenkinsLogin.Text = lastName.ToLower();
             mail.Text = shortMail.Text + "@smartway.today"; //email без домена
 
             // разбивка строки на слова
