@@ -229,7 +229,7 @@ namespace WindowsFormsApp1
 
         private void fio_Click(object sender, EventArgs e)
         {
-            buffer(fio);
+           
         }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -281,6 +281,16 @@ namespace WindowsFormsApp1
                 trackerOut.AppendText(writer(tbxJenkinsLogin.Text, passJenkins.Text, "Jenkins"));
 
             }
+        }
+
+        private void fio_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void fio_DoubleClick(object sender, EventArgs e)
+        {
+            buffer(fio);
         }
     }
 }

@@ -58,7 +58,9 @@
             this.fio.TabIndex = 0;
             this.fio.Text = "Фамилия Имя";
             this.fio.Click += new System.EventHandler(this.fio_Click);
+            this.fio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.fio_MouseClick);
             this.fio.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.fio.DoubleClick += new System.EventHandler(this.fio_DoubleClick);
             // 
             // fioTranslite
             // 
