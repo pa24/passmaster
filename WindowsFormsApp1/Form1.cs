@@ -116,7 +116,7 @@ namespace WindowsFormsApp1
         private static string RndStr(int letters, int numbers)
         {
             StringBuilder sb = new StringBuilder(letters + numbers);
-            string letterSet = "abcdefghijklmnpqrstuvwxyzABCDEFGHIJKLMNPQRSTUVWXYZ";
+            string letterSet = "abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ";
             string numberSet = "0123456789!?$*+=";
             for (int i = 0; i < letters; i++)
                 sb.Append(letterSet[rnd.Next(letterSet.Length)]);
