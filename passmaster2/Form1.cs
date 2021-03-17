@@ -292,5 +292,25 @@ namespace WindowsFormsApp1
         {
             buffer(fio);
         }
+
+        private void tbxGiteaLogin_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tbxJenkinsLogin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxGiteaLogin_MouseClick(object sender, MouseEventArgs e)
+        {
+            buffer(tbxGiteaLogin);
+        }
+
+        private void tbxJenkinsLogin_MouseClick(object sender, MouseEventArgs e)
+        {
+            buffer(tbxJenkinsLogin);
+        }
     }
 }
