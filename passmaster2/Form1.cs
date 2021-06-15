@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,25 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
         Dictionary<string, string> words = new Dictionary<string, string>();
+
+        public void OpenInBrowser(string a) // запуск ссылок в браузере
+        {
+            string yandexLnk = "https://connect.yandex.ru/portal/admin";
+            string slackLnk = "https://b2btravel.slack.com/admin";
+            string intercomLnk = "https://app.intercom.com/a/apps/l3shlkm4/settings/teammates";
+            string onpbx = "https://panel.onlinepbx.ru/ats/incoming";
+            string zoomLnk = "https://zoom.us/account/user#/";
+
+
+             Process.Start("chrome.exe", "https://connect.yandex.ru/portal/admin");
+            Process.Start("chrome.exe", "https://b2btravel.slack.com/admin");
+            Process.Start("chrome.exe", "https://app.intercom.com/a/apps/l3shlkm4/settings/teammates");
+            Process.Start("chrome.exe", "https://panel.onlinepbx.ru/ats/incoming");
+            Process.Start("chrome.exe", "https://zoom.us/account/user#/");
+
+
+
+        }
         public Form1()
         {
             InitializeComponent();
@@ -183,8 +203,11 @@ namespace WindowsFormsApp1
             trackerOut.Text = fio.Text;
             trackerOut.AppendText(writer(mail.Text, passMail.Text, "Почта"));
             trackerOut.AppendText("Остальные учетки на почте");
+            trackerOut.AppendText("\r\nДобавочный номер ");
             trackerOut.AppendText("\r\n((https://wiki.yandex.ru/homepage/Office/Nastrojjki-programm/Phoner-Lite/ Настройка PhonerLite))");
             trackerOut.AppendText("\r\n((https://wiki.yandex.ru/homepage/office/nastrojjki-programm/singinslack/ Как войти в Slack))");
+
+            
 
         }
 
@@ -279,6 +302,11 @@ namespace WindowsFormsApp1
             {
                 trackerOut.AppendText(writer(shortMail.Text, passGitea.Text, "Gitea"));
                 trackerOut.AppendText(writer(tbxJenkinsLogin.Text, passJenkins.Text, "Jenkins"));
+                label2.Visible = tbxGiteaLogin.Visible = passGitea.Visible = true; // делает строки логина/пароля  для дженкинса и гитеа видимыми при выборе чекбокса
+                label4.Visible = tbxJenkinsLogin.Visible = passJenkins.Visible = true;
+
+
+
 
             }
         }
@@ -291,6 +319,10 @@ namespace WindowsFormsApp1
         private void fio_DoubleClick(object sender, EventArgs e)
         {
             buffer(fio);
+            
         }
+
+        
+
     }
 }

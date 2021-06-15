@@ -46,6 +46,7 @@
             this.chkbDev = new System.Windows.Forms.CheckBox();
             this.tbxGiteaLogin = new System.Windows.Forms.TextBox();
             this.tbxJenkinsLogin = new System.Windows.Forms.TextBox();
+            this.cmbEmployeeType = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // fio
@@ -116,6 +117,7 @@
             this.passGitea.Name = "passGitea";
             this.passGitea.Size = new System.Drawing.Size(245, 26);
             this.passGitea.TabIndex = 8;
+            this.passGitea.Visible = false;
             this.passGitea.Click += new System.EventHandler(this.passFD_Click);
             this.passGitea.TextChanged += new System.EventHandler(this.passFD_TextChanged);
             // 
@@ -127,12 +129,13 @@
             this.passJenkins.Name = "passJenkins";
             this.passJenkins.Size = new System.Drawing.Size(245, 26);
             this.passJenkins.TabIndex = 10;
+            this.passJenkins.Visible = false;
             this.passJenkins.Click += new System.EventHandler(this.passAmo_Click);
             // 
             // generate
             // 
             this.generate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generate.Location = new System.Drawing.Point(184, 84);
+            this.generate.Location = new System.Drawing.Point(185, 119);
             this.generate.Margin = new System.Windows.Forms.Padding(2);
             this.generate.Name = "generate";
             this.generate.Size = new System.Drawing.Size(70, 34);
@@ -204,6 +207,7 @@
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 22;
             this.label2.Text = "Gitea";
+            this.label2.Visible = false;
             // 
             // label4
             // 
@@ -215,6 +219,7 @@
             this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 23;
             this.label4.Text = "Jenkins";
+            this.label4.Visible = false;
             // 
             // chkbDev
             // 
@@ -235,6 +240,7 @@
             this.tbxGiteaLogin.Name = "tbxGiteaLogin";
             this.tbxGiteaLogin.Size = new System.Drawing.Size(245, 26);
             this.tbxGiteaLogin.TabIndex = 25;
+            this.tbxGiteaLogin.Visible = false;
             // 
             // tbxJenkinsLogin
             // 
@@ -244,6 +250,24 @@
             this.tbxJenkinsLogin.Name = "tbxJenkinsLogin";
             this.tbxJenkinsLogin.Size = new System.Drawing.Size(245, 26);
             this.tbxJenkinsLogin.TabIndex = 26;
+            this.tbxJenkinsLogin.Visible = false;
+            // 
+            // cmbEmployeeType
+            // 
+            this.cmbEmployeeType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEmployeeType.FormattingEnabled = true;
+            this.cmbEmployeeType.Items.AddRange(new object[] {
+            "Гостиницы",
+            "Контрактинг",
+            "Поддержка",
+            "Продажи",
+            "Разработка",
+            "Сопровождение"});
+            this.cmbEmployeeType.Location = new System.Drawing.Point(187, 84);
+            this.cmbEmployeeType.Name = "cmbEmployeeType";
+            this.cmbEmployeeType.Size = new System.Drawing.Size(68, 21);
+            this.cmbEmployeeType.Sorted = true;
+            this.cmbEmployeeType.TabIndex = 27;
             // 
             // Form1
             // 
@@ -251,6 +275,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 398);
+            this.Controls.Add(this.cmbEmployeeType);
             this.Controls.Add(this.tbxJenkinsLogin);
             this.Controls.Add(this.tbxGiteaLogin);
             this.Controls.Add(this.chkbDev);
@@ -301,6 +326,7 @@
         private System.Windows.Forms.CheckBox chkbDev;
         private System.Windows.Forms.TextBox tbxGiteaLogin;
         private System.Windows.Forms.TextBox tbxJenkinsLogin;
+        private System.Windows.Forms.ComboBox cmbEmployeeType;
     }
 }
 
