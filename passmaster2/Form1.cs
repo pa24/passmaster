@@ -17,14 +17,10 @@ namespace WindowsFormsApp1
 
         public void OpenInBrowser(string a) // запуск ссылок в браузере
         {
-            string yandexLnk = "https://connect.yandex.ru/portal/admin";
-            string slackLnk = "https://b2btravel.slack.com/admin";
-            string intercomLnk = "https://app.intercom.com/a/apps/l3shlkm4/settings/teammates";
-            string onpbx = "https://panel.onlinepbx.ru/ats/incoming";
-            string zoomLnk = "https://zoom.us/account/user#/";
 
 
-             Process.Start("chrome.exe", "https://connect.yandex.ru/portal/admin");
+
+            Process.Start("chrome.exe", "https://connect.yandex.ru/portal/admin");
             Process.Start("chrome.exe", "https://b2btravel.slack.com/admin");
             Process.Start("chrome.exe", "https://app.intercom.com/a/apps/l3shlkm4/settings/teammates");
             Process.Start("chrome.exe", "https://panel.onlinepbx.ru/ats/incoming");
@@ -207,7 +203,80 @@ namespace WindowsFormsApp1
             trackerOut.AppendText("\r\n((https://wiki.yandex.ru/homepage/Office/Nastrojjki-programm/Phoner-Lite/ Настройка PhonerLite))");
             trackerOut.AppendText("\r\n((https://wiki.yandex.ru/homepage/office/nastrojjki-programm/singinslack/ Как войти в Slack))");
 
-            
+
+            //ссылки на админки для создания учеток
+            string yandexLnk = "https://connect.yandex.ru/portal/admin";
+            string slackLnk = "https://b2btravel.slack.com/admin";
+            string intercomLnk = "https://app.intercom.com/a/apps/l3shlkm4/settings/teammates";
+            string onpbx = "https://panel.onlinepbx.ru/ats/incoming";
+            string zoomLnk = "https://zoom.us/account/user#/";
+            string sbis = "https://online.sbis.ru/page/staff-list";
+            string mailchimp = "https://login.mailchimp.com/?referrer=%2Faccount%2Fusers%2F";
+            string yandexWebVisor = "https://metrika.yandex.ru/settings?id=38934205&tab=grants";
+            string gitea = "https://gitea.gospodaprogrammisty.ru/admin/users";
+            string jenkins = "https://jenkins.gospodaprogrammisty.ru/securityRealm/addUser";
+            string vpn = "https://wiki.yandex.ru/homepage/development/vpn/";
+            string BO = "https://bo.smartway.today/login";
+            string LK = "https://smartway.today/registration";
+
+
+
+            string[] linksForSales = { yandexLnk, slackLnk, onpbx, zoomLnk, sbis };
+            string[] linkForHotels = { yandexLnk, slackLnk, onpbx, zoomLnk, intercomLnk, LK, BO };
+            string[] linkForSupport = { yandexLnk, slackLnk, onpbx, zoomLnk, mailchimp, yandexWebVisor, LK, BO };
+            string[] linkForContracting = { yandexLnk, slackLnk, onpbx, zoomLnk, LK, BO };
+            string[] linkForSopr = linkForHotels;
+            string[] linkForDev = { yandexLnk, slackLnk, zoomLnk, LK, BO, vpn, jenkins, gitea };
+
+            switch (cmbEmployeeType.SelectedItem)
+            {
+                case "Гостиницы":
+                    foreach (string a in linkForHotels)
+                    {
+                        Process.Start("chrome.exe", a);
+                    }
+                    break;
+                case "Продажи":
+
+                    foreach (string a in linksForSales)
+                    {
+                        Process.Start("chrome.exe", a);
+                    }
+                    break;
+                case "Контрактинг":
+                    foreach (string a in linkForContracting)
+                    {
+                        Process.Start("chrome.exe", a);
+                    }
+                    break;
+                case "Поддержка":
+                    foreach (string a in linkForSupport)
+                    {
+                        Process.Start("chrome.exe", a);
+                    }
+                    break;
+                case "Сопровождение":
+                    foreach (string a in linkForSopr)
+                    {
+                        Process.Start("chrome.exe", a);
+                    }
+                    break;
+                case "Разработка":
+                    trackerOut.AppendText(writer(shortMail.Text, passGitea.Text, "Gitea"));
+                    trackerOut.AppendText(writer(tbxJenkinsLogin.Text, passJenkins.Text, "Jenkins"));
+                    label2.Visible = tbxGiteaLogin.Visible = passGitea.Visible = true; // делает строки логина/пароля  для дженкинса и гитеа видимыми при выборе чекбокса
+                    label4.Visible = tbxJenkinsLogin.Visible = passJenkins.Visible = true;
+                    foreach (string a in linkForDev)
+                    {
+                        Process.Start("chrome.exe", a);
+                    }
+                    break;
+
+            }
+
+
+
+
 
         }
 
@@ -219,7 +288,7 @@ namespace WindowsFormsApp1
                 "|| **" + nameOfService + "**||\r\n" +
                 "|| Логин | %%" + Email + "%%||\r\n" +
                 "|| Пароль | %%" + password + "%%||\r\n" + "|#";
-               // "|#\r\nВнутренний номер:\r\nОстальные учетки на почте";
+            // "|#\r\nВнутренний номер:\r\nОстальные учетки на почте";
         }
         private void chkAmo_CheckedChanged(object sender, EventArgs e)
         {
@@ -252,7 +321,7 @@ namespace WindowsFormsApp1
 
         private void fio_Click(object sender, EventArgs e)
         {
-           
+
         }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -298,12 +367,9 @@ namespace WindowsFormsApp1
 
         private void chkbDev_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkbDev.Checked) 
+            if (chkbDev.Checked)
             {
-                trackerOut.AppendText(writer(shortMail.Text, passGitea.Text, "Gitea"));
-                trackerOut.AppendText(writer(tbxJenkinsLogin.Text, passJenkins.Text, "Jenkins"));
-                label2.Visible = tbxGiteaLogin.Visible = passGitea.Visible = true; // делает строки логина/пароля  для дженкинса и гитеа видимыми при выборе чекбокса
-                label4.Visible = tbxJenkinsLogin.Visible = passJenkins.Visible = true;
+                
 
 
 
@@ -319,10 +385,33 @@ namespace WindowsFormsApp1
         private void fio_DoubleClick(object sender, EventArgs e)
         {
             buffer(fio);
-            
+
         }
 
-        
 
+        private void tbxGiteaLogin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxJenkinsLogin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxGiteaLogin_MouseClick(object sender, MouseEventArgs e)
+        {
+            buffer(tbxGiteaLogin);
+        }
+
+        private void tbxJenkinsLogin_MouseClick(object sender, MouseEventArgs e)
+        {
+            buffer(tbxJenkinsLogin);
+        }
+
+        private void cmbEmployeeType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

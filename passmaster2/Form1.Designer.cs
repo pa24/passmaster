@@ -241,6 +241,8 @@
             this.tbxGiteaLogin.Size = new System.Drawing.Size(245, 26);
             this.tbxGiteaLogin.TabIndex = 25;
             this.tbxGiteaLogin.Visible = false;
+            this.tbxGiteaLogin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbxGiteaLogin_MouseClick);
+            this.tbxGiteaLogin.TextChanged += new System.EventHandler(this.tbxGiteaLogin_TextChanged);
             // 
             // tbxJenkinsLogin
             // 
@@ -251,6 +253,8 @@
             this.tbxJenkinsLogin.Size = new System.Drawing.Size(245, 26);
             this.tbxJenkinsLogin.TabIndex = 26;
             this.tbxJenkinsLogin.Visible = false;
+            this.tbxJenkinsLogin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbxJenkinsLogin_MouseClick);
+            this.tbxJenkinsLogin.TextChanged += new System.EventHandler(this.tbxJenkinsLogin_TextChanged);
             // 
             // cmbEmployeeType
             // 
@@ -268,6 +272,7 @@
             this.cmbEmployeeType.Size = new System.Drawing.Size(68, 21);
             this.cmbEmployeeType.Sorted = true;
             this.cmbEmployeeType.TabIndex = 27;
+            this.cmbEmployeeType.SelectedIndexChanged += new System.EventHandler(this.cmbEmployeeType_SelectedIndexChanged);
             // 
             // Form1
             // 
