@@ -187,7 +187,7 @@ namespace WindowsFormsApp1
             string[] word = fio.Text.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             OnlyFirstName.Text = word[0];
             OnlySecondName.Text = word[1];
-
+            //
 
 
             // генерирование паролей 
