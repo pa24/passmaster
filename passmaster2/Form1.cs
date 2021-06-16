@@ -205,7 +205,17 @@ namespace WindowsFormsApp1
 
 
             //ссылки на админки для создания учеток
-            string yandexLnk = "https://connect.yandex.ru/portal/admin";
+            string yandexLnkSales = "https://connect.yandex.ru/portal/admin/departments/9";
+            string yandexLnkHotels = "https://connect.yandex.ru/portal/admin/departments/21";
+            string yandexLnkSupport = "https://connect.yandex.ru/portal/admin/departments/27";
+            string yandexLnkContracting = "https://connect.yandex.ru/portal/admin/departments/32";
+            string yandexLnkSopr = "https://connect.yandex.ru/portal/admin/departments/22";
+            string yandexLnkDev = "https://connect.yandex.ru/portal/admin/departments/4";
+
+
+
+
+
             string slackLnk = "https://b2btravel.slack.com/admin";
             string intercomLnk = "https://app.intercom.com/a/apps/l3shlkm4/settings/teammates";
             string onpbx = "https://panel.onlinepbx.ru/ats/incoming";
@@ -221,12 +231,12 @@ namespace WindowsFormsApp1
 
 
 
-            string[] linksForSales = { yandexLnk, slackLnk, onpbx, zoomLnk, sbis };
-            string[] linkForHotels = { yandexLnk, slackLnk, onpbx, zoomLnk, intercomLnk, LK, BO };
-            string[] linkForSupport = { yandexLnk, slackLnk, onpbx, zoomLnk, mailchimp, yandexWebVisor, LK, BO };
-            string[] linkForContracting = { yandexLnk, slackLnk, onpbx, zoomLnk, LK, BO };
-            string[] linkForSopr = linkForHotels;
-            string[] linkForDev = { yandexLnk, slackLnk, zoomLnk, LK, BO, vpn, jenkins, gitea };
+            string[] linksForSales = { yandexLnkSales, slackLnk, onpbx, zoomLnk, sbis };
+            string[] linkForHotels = { yandexLnkHotels, slackLnk, onpbx, zoomLnk, intercomLnk, LK, BO };
+            string[] linkForSupport = { yandexLnkSupport, slackLnk, onpbx, zoomLnk, mailchimp, yandexWebVisor, LK, BO };
+            string[] linkForContracting = { yandexLnkContracting, slackLnk, onpbx, zoomLnk, LK, BO };
+            string[] linkForSopr = { yandexLnkSopr, slackLnk, onpbx, zoomLnk, intercomLnk, LK, BO };
+            string[] linkForDev = { yandexLnkDev, slackLnk, zoomLnk, LK, BO, vpn, jenkins, gitea };
 
             switch (cmbEmployeeType.SelectedItem)
             {
